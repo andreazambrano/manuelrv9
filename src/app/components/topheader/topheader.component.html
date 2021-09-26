@@ -1,0 +1,110 @@
+ <header>
+            <div id="main-menu"  class="main-menu-container" style="background:black;">
+                <div  class="main-menu">
+                    <div class="container">
+                        <div class="navbar-default">
+                            <div class="navbar-header float-left">
+                                <a class="navbar-brand text-uppercase" routerLink=""><img src="assets/assetsmanu/img/logo/logo1.png" alt="logo"></a>
+                            </div><!-- /.navbar-header -->
+
+                            
+                            <div class="log-in float-right" style="right: 30px;">
+                                <a  data-toggle="modal" data-target="#myModal" style="color: white;">log in <i class="fas fa-sign-in-alt"></i></a>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+
+                                            <!-- Modal Header -->
+                                            <div class="modal-header backgroud-style">
+                                                <div class="gradient-bg"></div>
+                                                <div class="popup-logo">
+                                                    <img src="assets/assetsmanu/img/logo/p-logo.jpg" alt="">
+                                                </div>
+                                                <div class="popup-text text-center">
+                                                    <h2> <span>Inicio de session</span> </h2>
+                                                    <p>inicia session o <span>REGISTRATE</span></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                
+                                                <!-- <div class="alt-text text-center"><a >OR SIGN IN</a> </div> -->
+                                              
+
+                                                <form [formGroup]="ngFormLogin" (ngSubmit) ="onLogin()">
+                                                    <div class="form-group form-focus">
+                                                        <input type="email" class="form-control floating" id="email" placeholder="Email" formControlName="email" [(ngModel)]="user.email"required [ngClass]="{ 'is-invalid': submitted && fval.email.errors }">
+                                                        <label class="focus-label">Usuario</label>
+                                                            <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+                                                                <div *ngIf="fval.email.errors.required">El email es requerido</div>
+                                                                <div *ngIf="fval.email.errors.email">Ingrese una direccion email valida</div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="form-group form-focus">
+                                                        <input   type="password"id="password" placeholder="*******" formControlName="password" [(ngModel)]="user.password" [ngClass]="{ 'is-invalid': submitted && fval.password.errors}"  required class="form-control floating">
+                                                            <div *ngIf="submitted && fval.password.errors"class="invalid-feedback">
+                                                                <div ngClass="fval.password.errors.required">
+                                                                La contraseña es requerida.
+                                                                </div>
+
+                                                            </div>
+                                                        <label class="focus-label">Contraseña</label>
+                                                    </div>
+                                                
+                                                    <div class="text-right">
+                                                        <a class="forgot-link" href="">Has olvidado tu contraseña ?</a>
+                                                    </div>
+                                                    <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Iniciar Session</button>
+                                                    <div class="login-or">
+                                                        <span class="or-line"></span>
+                                                        <span class="span-or">o</span>
+                                                    </div>
+                                                  
+                                                    <div class="text-center dont-have">Eres nuevo usuario? <a routerLink="/register">Registrarse</a></div>
+                                                </form>
+
+                                                <div class="log-in-footer text-center">
+                                                    <p>* campos requeridos.</p>
+                                                   <!--  <p>** At least one telephone number is required.</p> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <nav class="navbar-menu float-right">
+                                <div class="nav-menu ul-li">
+                                    <ul>
+                                        <li class="menu-item-has-children ul-li-block">
+                                            <a routerLink="">Home</a>
+                                        </li>
+                                        <li [hidden]="!_uw.isLogged"><a routerLink="courses">Cursos</a></li>
+                                        <li><a routerLink="blog">Blog</a></li>
+                                        <li><a routerLink="contact">Contacto</a></li>
+                                       
+                                    </ul>
+                                </div>
+                            </nav>
+
+                            <div class="mobile-menu">
+                                <div  routerLink="" class="logo"><a ><img src="assets/assetsmanu/img/logo/logo1.png" alt="Logo"></a></div>
+                                <nav>
+                                    <ul>
+                                        <li><a routerLink="">Home</a>
+                                        </li>
+                                           <li [hidden]="!_uw.isLogged"><a routerLink="courses" >Cursos</a></li>
+                                        <li><a routerLink="blog">Blog</a></li>
+                                        <li><a routerLink="contact">Contacto</a></li>
+                                        
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
