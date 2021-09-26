@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { CarouselModule } from 'ngx-owl-carousel-o';
-import { ArchwizardModule } from 'angular-archwizard';
+//import { CarouselModule } from 'ngx-owl-carousel-o';
+//import { ArchwizardModule } from 'angular-archwizard';
 import { HttpClientModule } from '@angular/common/http';
 //RUTAS
 import { app_routing } from "./app.routes";       
@@ -36,7 +36,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 
 
-import { FilePickerModule } from  '../assets/file-picker/src/public_api';
+//import { FilePickerModule } from  '../assets/file-picker/src/public_api';
 //COMPONENTS
 import { TestappComponent } from './components/testapp/testapp.component';
 /*import { FruitfooterComponent } from './components/fruitfooter/fruitfooter.component';
@@ -123,9 +123,9 @@ import { CoursesComponent } from './components/courses/courses.component';
     ReactiveFormsModule,
     MatBadgeModule,
     MatTableModule,
-    ArchwizardModule,
-    CarouselModule,
-    FilePickerModule,
+   // ArchwizardModule,
+ //   CarouselModule,
+ //   FilePickerModule,
     MatRadioModule,
   ],
   exports: [
