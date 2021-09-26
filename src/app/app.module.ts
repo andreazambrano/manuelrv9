@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-//import { CarouselModule } from 'ngx-owl-carousel-o';
+//import {   } from 'ngx-owl-carousel-o';
 //import { ArchwizardModule } from 'angular-archwizard';
 import { HttpClientModule } from '@angular/common/http';
 //RUTAS
@@ -124,7 +124,7 @@ import { CoursesComponent } from './components/courses/courses.component';
     MatBadgeModule,
     MatTableModule,
    // ArchwizardModule,
- //   CarouselModule,
+ //     ,
  //   FilePickerModule,
     MatRadioModule,
   ],
